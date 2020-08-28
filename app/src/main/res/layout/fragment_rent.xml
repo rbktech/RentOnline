@@ -21,8 +21,41 @@
             android:layout_height="77dp"
             android:clickable="false"
             android:gravity="center_horizontal|center_vertical"
-            android:text="Добрый день,\nпользователь"
+            android:text="Здравствуйте,\nпользователь"
             android:textSize="24sp" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName"
+            android:layout_width="match_parent"
+            android:layout_height="85dp"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="textPersonName"
+            android:text="Город" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName4"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="textPersonName"
+            android:text="Дата" />
+
+        <EditText
+            android:id="@+id/editTextTextPersonName3"
+            android:layout_width="match_parent"
+            android:layout_height="87dp"
+            android:ems="10"
+            android:gravity="center_horizontal|center_vertical"
+            android:inputType="textPersonName"
+            android:text="Количество персон" />
+
+        <Button
+            android:id="@+id/button3"
+            android:layout_width="match_parent"
+            android:layout_height="77dp"
+            android:text="Найти" />
 
     </LinearLayout>
 </FrameLayout>

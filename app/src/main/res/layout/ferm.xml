@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#00000000"
+    android:orientation="vertical">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="250dp">
+
+        <ImageView
+            android:id="@+id/imgFerm"
+            android:layout_width="130dp"
+            android:layout_height="0dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintVertical_bias="0.0"
+            app:srcCompat="@mipmap/ic_ferm" />
+
+        <ImageButton
+            android:id="@+id/btnLike"
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:background="#00FFFFFF"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnDescription"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="Описание"
+            app:layout_constraintEnd_toStartOf="@+id/btnLike"
+            app:layout_constraintHorizontal_bias="0"
+            app:layout_constraintStart_toEndOf="@+id/imgFerm"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Button
+            android:id="@+id/btnAppraisal"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="Оценка"
+            app:layout_constraintEnd_toStartOf="@+id/btnLike"
+            app:layout_constraintStart_toEndOf="@+id/imgFerm"
+            app:layout_constraintTop_toBottomOf="@+id/btnDescription" />
+
+        <Button
+            android:id="@+id/btnStatistics"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="Статистика"
+            app:layout_constraintEnd_toStartOf="@+id/btnLike"
+            app:layout_constraintStart_toEndOf="@+id/imgFerm"
+            app:layout_constraintTop_toBottomOf="@+id/btnAppraisal" />
+
+        <Button
+            android:id="@+id/btnStatus"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#00FFFFFF"
+            android:text="Статус"
+            app:layout_constraintEnd_toStartOf="@+id/btnLike"
+            app:layout_constraintStart_toEndOf="@+id/imgFerm"
+            app:layout_constraintTop_toBottomOf="@+id/btnStatistics" />
+
+        <TextView
+            android:id="@+id/txtCost"
+            android:layout_width="54dp"
+            android:layout_height="28dp"
+            android:gravity="center_horizontal|center_vertical"
+            android:text="Цена"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>

@@ -11,10 +11,6 @@
         android:layout_height="match_parent"
         android:orientation="vertical">
 
-        <Space
-            android:layout_width="match_parent"
-            android:layout_height="78dp" />
-
         <TextView
             android:id="@+id/nameTextView"
             android:layout_width="match_parent"

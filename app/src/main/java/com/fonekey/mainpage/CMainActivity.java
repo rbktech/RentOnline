@@ -2,6 +2,7 @@ package com.fonekey.mainpage;
 import com.fonekey.R;
 import com.google.android.material.tabs.TabLayout;
 
+import androidx.appcompat.app.ActionBar;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager.widget.ViewPager;
 
@@ -21,5 +22,8 @@ public class CMainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(pagerAdapter);
         viewPager.addOnPageChangeListener(new TabLayout.TabLayoutOnPageChangeListener(tabLayout));
+
+        ActionBar actionBar = getSupportActionBar();
+        actionBar.setElevation(0);
     }
 }

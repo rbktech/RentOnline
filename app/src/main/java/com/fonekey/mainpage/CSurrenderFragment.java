@@ -45,9 +45,33 @@ public class CSurrenderFragment extends Fragment {
         CFerm ferm2 = new CFerm();
         ferm2.m_cost = "20000";
 
+        CFerm ferm3 = new CFerm();
+        ferm3.m_cost = "30000";
+
+        CFerm ferm4 = new CFerm();
+        ferm4.m_cost = "40000";
+
+        CFerm ferm5 = new CFerm();
+        ferm5.m_cost = "50000";
+
+        CFerm ferm6 = new CFerm();
+        ferm6.m_cost = "60000";
+
+        CFerm ferm7 = new CFerm();
+        ferm7.m_cost = "70000";
+
+        CFerm ferm8 = new CFerm();
+        ferm8.m_cost = "80000";
+
         m_lstFerm = new ArrayList<>();
         m_lstFerm.add(ferm1);
         m_lstFerm.add(ferm2);
+        m_lstFerm.add(ferm3);
+        m_lstFerm.add(ferm4);
+        m_lstFerm.add(ferm5);
+        m_lstFerm.add(ferm6);
+        m_lstFerm.add(ferm7);
+        m_lstFerm.add(ferm8);
 
         // Заполняем лист домов
     }

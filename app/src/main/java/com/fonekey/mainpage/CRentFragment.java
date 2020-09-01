@@ -18,7 +18,7 @@ public class CRentFragment extends Fragment {
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        final View v = inflater.inflate(R.layout.fragment_rent, container, false);
+        View v = inflater.inflate(R.layout.fragment_rent, container, false);
 
         Button m_btnSearch;
         m_btnSearch = (Button) v.findViewById(R.id.btnSearch);

@@ -1,5 +1,6 @@
 package com.fonekey.mainpage;
 import com.fonekey.R;
+import com.fonekey.searchpage.CSearchActivity;
 
 import android.content.Intent;
 import android.os.Bundle;

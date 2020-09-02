@@ -1,6 +1,7 @@
 package com.fonekey.mainpage;
 
 import androidx.annotation.NonNull;
+import androidx.annotation.Nullable;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter;
@@ -15,6 +16,19 @@ public class CPagerAdapter extends FragmentPagerAdapter {
 
         m_rent = new CRentFragment();
         m_surrender = new CSurrenderFragment();
+    }
+
+    @Nullable
+    @Override
+    public CharSequence getPageTitle(int position) {
+        switch (position){
+            case 0:
+                return "Аренда";
+            case 1:
+                return "Сдача";
+            default:
+                return null;
+        }
     }
 
     @NonNull

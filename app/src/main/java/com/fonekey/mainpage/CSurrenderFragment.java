@@ -1,12 +1,20 @@
 package com.fonekey.mainpage;
 import com.fonekey.R;
+import com.fonekey.fermpage.CFermActivity;
+import com.fonekey.searchpage.CFilterFragment;
+import com.fonekey.searchpage.CSearchActivity;
+import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
+import android.content.Intent;
 import android.os.Bundle;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+
+import androidx.fragment.app.DialogFragment;
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
@@ -24,15 +32,27 @@ public class CSurrenderFragment extends Fragment {
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_surrender, container, false);
 
+        FloatingActionButton btnAddFerm;
+        btnAddFerm = (FloatingActionButton) view.findViewById(R.id.btnAddFerm);
+        btnAddFerm.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v)
+            {
+                DialogFragment fr = new DialogFragment();
+                fr.showNow(getFragmentManager(), "asdasd");
+                //m_lstFerm.remove(0);
+                //Intent intent = new Intent(getActivity(), CFermActivity.class);
+                //startActivity(intent);
+            }
+        });
+
         RecyclerView m_recyclerViewFerm = (RecyclerView) view.findViewById(R.id.recycle_view);
         m_recyclerViewFerm.setHasFixedSize(true);
         m_recyclerViewFerm.setLayoutManager(new LinearLayoutManager(getActivity()));
 
         m_recyclerViewFerm.setAdapter(new CRecyclerAdapter(m_lstFerm));
 
-        //m_recyclerViewFerm.setAdapter(new CRecyclerAdapter(getContext(), m_lstFerm));
-
-         return view;
+        return view;
     }
 
     @Override

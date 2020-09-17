@@ -13,16 +13,25 @@ import android.widget.Button;
 
 import androidx.fragment.app.Fragment;
 import android.view.View.OnClickListener;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class CRentFragment extends Fragment {
+
+    CClient m_client;
+    TextView m_txtMessage;
+
+    public CRentFragment() {
+        m_client = new CClient();
+    };
 
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater, @Nullable ViewGroup container, @Nullable Bundle savedInstanceState) {
-        View v = inflater.inflate(R.layout.fragment_rent, container, false);
+        View view = inflater.inflate(R.layout.fragment_rent, container, false);
 
         Button m_btnSearch;
-        m_btnSearch = (Button) v.findViewById(R.id.btnSearch);
+        m_btnSearch = (Button) view.findViewById(R.id.btnSearch);
         m_btnSearch.setOnClickListener(new OnClickListener() {
             @Override
             public void onClick(View v)
@@ -32,6 +41,16 @@ public class CRentFragment extends Fragment {
             }
         });
 
-        return v;
+        Button btnSend = (Button) view.findViewById(R.id.btnSend);
+        m_txtMessage = (TextView) view.findViewById(R.id.txtTown);
+        btnSend.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Toast.makeText(getActivity(), "onClick:", Toast.LENGTH_SHORT).show();
+                m_client.SendData(m_txtMessage.getText().toString());
+            }
+        });
+
+        return view;
     }
 }

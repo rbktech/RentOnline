@@ -1,20 +1,20 @@
 package com.fonekey.mainpage;
 
-import android.content.Context;
+import android.nfc.NdefRecord;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
 import android.widget.TextView;
 
-import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.fonekey.R;
 
 import java.util.List;
 
-public class CRecyclerAdapter extends RecyclerView.Adapter<CRecyclerAdapter.CFermViewHolder> {
-
+public class CRecyclerAdapter extends RecyclerView.Adapter<CRecyclerAdapter.CFermViewHolder>
+{
     private List<CFerm> m_lstFerm;
 
     public CRecyclerAdapter(List<CFerm> lstFerm) {
@@ -22,20 +22,49 @@ public class CRecyclerAdapter extends RecyclerView.Adapter<CRecyclerAdapter.CFer
     }
 
     @Override
-    public CFermViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType) {
-        View v = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.ferm, viewGroup, false);
-        return new CFermViewHolder(v);
+    public CFermViewHolder onCreateViewHolder(ViewGroup viewGroup, int viewType)
+    {
+        View view = LayoutInflater.from(viewGroup.getContext()).inflate(R.layout.ferm, viewGroup, false);
+
+        Button btnPay = (Button) view.findViewById(R.id.btnPay);
+        btnPay.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+            }
+        });
+
+
+        return new CFermViewHolder(view);
     }
 
-    public static class CFermViewHolder extends RecyclerView.ViewHolder {
-
+    public static class CFermViewHolder extends RecyclerView.ViewHolder
+    {
         private TextView m_cost;
 
-        public CFermViewHolder(View itemView) {
+        public CFermViewHolder(View itemView)
+        {
             super (itemView);
 
             m_cost = (TextView) itemView.findViewById(R.id.txtCost);
         }
+    }
+
+    public void onItemDel(int position)
+    {
+        if(position != -1 && position < m_lstFerm.size()) {
+            m_lstFerm.remove(position);
+            notifyItemRemoved(position);
+            notifyItemRangeChanged(position, getItemCount());
+        }
+    }
+
+    public void onItemAdd(String street)
+    {
+        CFerm ferm = new CFerm();
+        ferm.m_cost = street;
+        m_lstFerm.add(0, ferm);
+        notifyItemInserted(0);
+        // notifyItemRangeInserted(m_lstFerm.size() + 1, m_lstFerm.size());
     }
 
     @Override
@@ -45,30 +74,4 @@ public class CRecyclerAdapter extends RecyclerView.Adapter<CRecyclerAdapter.CFer
 
     @Override
     public int getItemCount() { return m_lstFerm.size(); }
-
-    /*Context m_context;
-    List<CFerm> m_firmList;
-
-
-    public CRecyclerAdapter (Context context, List<CFerm> list) {
-        this.m_context = context;
-        this.m_firmList = list;
-    }
-
-    @NonNull
-    @Override
-    public CFermViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        View v = LayoutInflater.from(m_context).inflate(R.layout.ferm, parent, false);
-        return new CFermViewHolder(v);
-    }
-
-    @Override
-    public void onBindViewHolder(@NonNull CFermViewHolder holder, int position) {
-
-    }
-
-    @Override
-    public int getItemCount() {
-        return m_firmList.size();
-    }*/
 }

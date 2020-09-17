@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
@@ -21,6 +22,7 @@
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:text="Местоположение"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toTopOf="parent" />
@@ -28,24 +30,14 @@
         <EditText
             android:id="@+id/txtDefinitionFerm"
             android:layout_width="0dp"
-            android:layout_height="230dp"
+            android:layout_height="174dp"
             android:ems="10"
             android:gravity="start|top"
             android:inputType="textMultiLine"
+            android:text="Описание"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtStreetFerm" />
-
-        <CalendarView
-            android:id="@+id/calendarView"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="30dp"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtPhoto"
-            app:layout_constraintVertical_bias="1.0" />
 
         <EditText
             android:id="@+id/txtPhoto"
@@ -58,6 +50,29 @@
             app:layout_constraintHorizontal_bias="1.0"
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/txtDefinitionFerm" />
+
+        <Button
+            android:id="@+id/btnSaveFerm"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Сохранить"
+            app:layout_constraintEnd_toEndOf="@+id/txtPhoto"
+            app:layout_constraintStart_toStartOf="@+id/txtPhoto"
+            app:layout_constraintTop_toBottomOf="@+id/txtPhoto" />
+
+        <CalendarView
+            android:id="@+id/calendarView"
+            android:layout_width="0dp"
+            android:layout_height="302dp"
+            android:layout_marginBottom="30dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/btnSaveFerm"
+            app:layout_constraintVertical_bias="0" />
+
+
     </androidx.constraintlayout.widget.ConstraintLayout>
 
 </LinearLayout>

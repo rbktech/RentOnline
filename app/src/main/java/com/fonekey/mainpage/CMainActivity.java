@@ -10,11 +10,7 @@ import com.google.android.material.tabs.TabLayout;
 
 public class CMainActivity extends AppCompatActivity {
 
-    CClient m_client;
-
-    public CMainActivity() {
-        m_client = new CClient();
-    };
+    public CMainActivity() {};
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,6 +22,7 @@ public class CMainActivity extends AppCompatActivity {
 
         viewPager.setAdapter(new CPagerAdapter(getSupportFragmentManager()));
         tabLayout.setupWithViewPager(viewPager);
+
     }
 
     @Override

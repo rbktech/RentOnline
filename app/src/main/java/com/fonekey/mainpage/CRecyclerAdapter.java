@@ -1,6 +1,5 @@
 package com.fonekey.mainpage;
 
-import android.nfc.NdefRecord;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;

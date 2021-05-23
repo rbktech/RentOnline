@@ -2,7 +2,6 @@
 #define CMAINFRAME_H
 
 #include "person.h"
-#include <wx/notebook.h>
 
 #include <file.h>
 

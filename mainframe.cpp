@@ -2,8 +2,8 @@
 
 // #include "time.h"
 
-#define IP_CONNECT "192.168.1.66"
-// #define IP_CONNECT "127.0.0.1"
+// #define IP_CONNECT "192.168.1.66"
+#define IP_CONNECT "192.168.43.23"
 
 BEGIN_EVENT_TABLE(CMainFrame, wxFrame)
 	EVT_TIMER(TIMER_ID, CMainFrame::OnTimer)
@@ -49,7 +49,16 @@ void CMainFrame::OnTimer(wxTimerEvent& event)
 {
 	if(m_setPerson == true) {
 		m_setPerson = false;
-		m_notebook->AddPage(new CPerson(m_notebook, m_person, &m_client), m_person.id);
+		m_notebook->AddPage(new CPerson(m_notebook, &m_person, &m_client), m_person.id);
+	}
+
+	if(m_person.delPage.empty() == false) {
+		wxYield();
+		std::this_thread::sleep_for(std::chrono::seconds(1));
+		for(auto& p : m_person.delPage)
+			m_notebook->RemovePage(p);
+
+		m_person.delPage.clear();
 	}
 }
 
@@ -76,9 +85,7 @@ void CMainFrame::FuncReceiveData(const uint8_t* data, const int& size)
 
 		m_part.ClearVal();
 
-		if(parse.size() == 7) {
-
-			printf("ss");
+		if(parse.size() == 8) {
 
 			char picture[20] = { 0 };
 			memcpy(&picture[16], ".jpg", 4);
@@ -87,15 +94,15 @@ void CMainFrame::FuncReceiveData(const uint8_t* data, const int& size)
 
 			m_person.id = picture;
 
-			m_person.guid = wxString(parse.at(3).first, parse.at(3).second);
-			m_person.mail = wxString(parse.at(4).first, parse.at(4).second);
-			m_person.password = wxString(parse.at(5).first, parse.at(5).second);
+			m_person.guid = wxString(parse.at(4).first, parse.at(4).second);
+			m_person.mail = wxString(parse.at(5).first, parse.at(5).second);
+			m_person.password = wxString(parse.at(6).first, parse.at(6).second);
 
 			// m_person.surname = wxString(parse.at(6).first, parse.at(6).second);
 			// m_person.name = wxString(parse.at(7).first, parse.at(7).second);
 			m_person.namePhoto = wxString::Format(wxT("./picture/%s.jpg"), picture);
 
-			if(CFile::CreateWriteFile(m_person.namePhoto, (char*)parse.at(6).first, parse.at(6).second) == 0) {
+			if(CFile::CreateWriteFile(m_person.namePhoto, (char*)parse.at(7).first, parse.at(7).second) == 0) {
 				m_setPerson = true;
 
 				/*int count = 0;
@@ -157,7 +164,7 @@ void CMainFrame::FuncReceiveData(const uint8_t* data, const int& size)
 				send[count++] = '\n';
 
 				SendFunc func = [=](int sock, const uint8_t* data, const int& size) {
-					m_client.Send(sock, data, size);
+				        m_client.Send(sock, data, size);
 				};
 
 				uint8_t array[SIZE_TRAFFIC] = { 0 };

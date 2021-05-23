@@ -1,21 +1,27 @@
 #include "person.h"
 
-CPerson::CPerson(wxWindow* parent, const TPerson& person, CTCPClient* client)
+CPerson::CPerson(wxNotebook* parent, TPerson* person, CTCPClient* client)
 	: wxPanel(parent)
 {
+	m_person = person;
+	m_parent = parent;
+
 	m_client = client;
 
-	m_guid = person.guid;
-	m_mail = person.mail;
-	m_password = person.password;
-	m_path = person.namePhoto;
+	m_guid = person->guid;
+	m_mail = person->mail;
+	m_password = person->password;
+	m_path = person->namePhoto;
 
 	wxButton* no = new wxButton(this, BTN_ID_NO, wxT("No"));
 	wxButton* yes = new wxButton(this, BTN_ID_YES, wxT("Yes"));
 
-	wxTextCtrl* surname = new wxTextCtrl(this, NewControlId(), person.name);
-	wxTextCtrl* name = new wxTextCtrl(this, NewControlId(), person.surname);
+	// wxTextCtrl* surname = new wxTextCtrl(this, NewControlId(), person->name);
+	// wxTextCtrl* name = new wxTextCtrl(this, NewControlId(), person->surname);
 	// wxTextCtrl* patronymic = new wxTextCtrl(this, NewControlId());
+
+	wxTextCtrl* mail = new wxTextCtrl(this, NewControlId(), person->mail);
+	wxTextCtrl* guid = new wxTextCtrl(this, NewControlId(), person->guid);
 
 	wxBoxSizer* h_box = nullptr;
 	// wxBoxSizer* v_box = nullptr;
@@ -25,13 +31,13 @@ CPerson::CPerson(wxWindow* parent, const TPerson& person, CTCPClient* client)
 	h_box = new wxBoxSizer(wxHORIZONTAL);
 
 	gr_box = new wxFlexGridSizer(2, 2, 0, 0);
-	gr_box->Add(new wxStaticText(this, wxID_ANY, wxT("Surname")));
-	gr_box->Add(surname);
-	gr_box->Add(new wxStaticText(this, wxID_ANY, wxT("Name")));
-	gr_box->Add(name);
+	gr_box->Add(new wxStaticText(this, wxID_ANY, wxT("Guid")));
+	gr_box->Add(guid);
+	gr_box->Add(new wxStaticText(this, wxID_ANY, wxT("Mail")));
+	gr_box->Add(mail);
 
 	h_box->Add(gr_box);
-	h_box->Add(InitImage(person.namePhoto));
+	h_box->Add(InitImage(person->namePhoto));
 
 	main_box->Add(h_box);
 
@@ -115,9 +121,12 @@ void CPerson::OnPermissionModerator(wxCommandEvent& event)
 	uint8_t array[1100] = { 0 };
 	int size = 0;
 
-	SliceMessage(send, count, array, size, m_client->GetSocket(), [=](int sock, const uint8_t* data, const int& size) {
+	SliceMessage(send, count, array, size, m_client->GetSocket(),
+	[=](int sock, const uint8_t* data, const int& size) {
 		m_client->Send(sock, data, size);
 	});
+
+	m_person->delPage.push_back(m_parent->GetSelection());
 }
 
 wxStaticBitmap* CPerson::InitImage(wxString namePhoto)

@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <group android:checkableBehavior="single">
+
+        <item
+            android:id="@+id/menu_regisration"
+            android:title="@string/account"
+            android:icon="@drawable/baseline_account_circle_24"/>
+
+        <item
+            android:id="@+id/menu_search"
+            android:title="@string/search"
+            android:icon="@drawable/baseline_search_24"/>
+
+        <!--
+        <item
+            android:id="@+id/menu_rent"
+            android:title="@string/rent"
+            android:orderInCategory="1"
+            android:icon="@drawable/baseline_location_city_24"/>
+            -->
+
+        <item
+            android:id="@+id/menu_surrender"
+            android:title="@string/surrender"
+            android:icon="@drawable/baseline_screen_lock_portrait_24"/>
+
+    </group>
+
+</menu>

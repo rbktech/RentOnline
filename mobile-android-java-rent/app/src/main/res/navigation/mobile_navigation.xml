@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/mobile_navigation"
+    app:startDestination="@+id/menu_search">
+
+    <fragment
+        android:id="@+id/menu_search"
+        android:name="ru.rbkdev.lease.search.CSearchFragment"
+        android:label="PhoneDooring"
+        tools:layout="@layout/fragment_search"/>
+
+<!--
+        <fragment
+        android:id="@+id/menu_rent"
+        android:name="ru.rbkdev.lease.mainpage.CRentFragment"
+        android:label="Сдаваемые квартиры"
+        tools:layout="@layout/fragment_rent"/>
+-->
+
+    <fragment
+        android:id="@+id/menu_surrender"
+        android:name="ru.rbkdev.lease.key.CSurrenderFragment"
+        android:label="Арендуемые квартиры"
+        tools:layout="@layout/fragment_surrender"/>
+
+    <fragment
+        android:id="@+id/menu_regisration"
+        android:name="ru.rbkdev.lease.account.CAccountFragment"
+        android:label="@string/account"
+        tools:layout="@layout/account_fragment"/>
+
+    <!--
+    <activity
+        android:id="@+id/navAccountLogin"
+        android:name="ru.rbkdev.lease.account.login.CLoginActivity"
+        android:label="Вход"
+        tools:layout="@layout/account_login_activity"/>
+        -->
+
+</navigation>

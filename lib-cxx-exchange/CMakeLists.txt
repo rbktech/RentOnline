@@ -41,6 +41,9 @@ add_library(${PROJECT_NAME}
         # src/fileLinux.cpp
         src/linkLinux.cpp
         src/listlink.cpp
+
+        src/reform.cpp
+        src/knuckle.cpp
 )
 
 set_target_properties(${PROJECT_NAME}
@@ -80,6 +83,10 @@ set(INSTALL_HEADER_FILES
         # include/fileLinux.hpp
         include/linkLinux.hpp
         include/listlink.h
+
+        include/reform.h
+        include/list_id.h
+        include/knuckle.h
 )
 
 set(INSTALL_TARGET_FILES

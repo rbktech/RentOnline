@@ -1,0 +1,47 @@
+<resources>
+
+    <string name="app_name">Rent Online</string>
+
+    <string name="open">Открыть</string>
+    <string name="close">Закрыть</string>
+    <string name="refresh">Обновить</string>
+    <string name="not_connect">Нет соединения</string>
+
+    <string name="exchange_id_user">id_user</string>
+    <string name="exchange_id_house">id_house</string>
+    <string name="exchange_address_house">address_house</string>
+    <string name="exchange_message">message</string>
+    <string name="exchange_command">command</string>
+    <string name="exchange_status">status</string>
+    <string name="exchange_code_password">code_password</string>
+
+    <string name="intent_id_house">INTENT_ID_HOUSE</string>
+    <!--  <string name="intent_address">INTENT_ADDRESS</string> -->
+    <string name="intent_house">INTENT_HOUSE</string>
+    <string name="intent_pay_result">INTENT_PAY_RESULT</string>
+
+    <string name="default_ip">127.0.0.1</string>
+    <string name="default_port">21432</string>
+    <string name="default_timeout">1000</string>
+    <string name="default_address">0000000000</string>
+
+    <string name="code_success">Success</string>
+    <string name="code_error">Error</string>
+
+    <string name="nav_keys_list">Ключи</string>
+    <string name="nav_houses_list">Дома</string>
+    <string name="nav_settings">Настройки</string>
+    <string name="nav_map">Карта</string>
+
+    <string name="settings_connect">Соединение</string>
+    <string name="settings_connect_ip">IP-адрес</string>
+    <string name="settings_connect_port">Порт</string>
+    <string name="settings_connect_timeout">Тайм-аут</string>
+    <string name="settings_access_point">Точка доступа</string>
+    <string name="settings_access_point_name">Имя</string>
+    <string name="settings_access_point_password">Пароль</string>
+    <string name="settings_about">О программе</string>
+    <string name="settings_version">Версия</string>
+    <string name="settings_btn_load">Установить BLE настройки</string>
+
+</resources>

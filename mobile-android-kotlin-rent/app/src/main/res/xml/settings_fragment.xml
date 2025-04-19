@@ -1,0 +1,43 @@
+<PreferenceScreen
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <PreferenceCategory
+
+        app:key="connect_category"
+        app:title="@string/settings_connect">
+
+        <EditTextPreference
+            android:defaultValue="@string/default_ip"
+            app:key="ip"
+            app:title="@string/settings_connect_ip"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:defaultValue="@string/default_port"
+            app:key="port"
+            app:title="@string/settings_connect_port"
+            app:useSimpleSummaryProvider="true" />
+
+        <EditTextPreference
+            app:defaultValue="@string/default_timeout"
+            app:key="timeout"
+            app:title="@string/settings_connect_timeout"
+            app:useSimpleSummaryProvider="true" />
+
+    </PreferenceCategory>
+
+    <PreferenceCategory
+
+        app:key="about_category"
+        app:title="@string/settings_about">
+
+        <Preference
+            app:key="version"
+            app:summary=""
+            app:title="@string/settings_version" />
+
+    </PreferenceCategory>
+
+</PreferenceScreen>

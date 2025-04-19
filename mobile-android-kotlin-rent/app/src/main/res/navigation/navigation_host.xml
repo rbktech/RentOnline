@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:id="@+id/navigationHost"
+    app:startDestination="@+id/navigationMap">
+
+    <fragment
+        android:id="@+id/navigationKeysList"
+        android:name="ru.rbkdev.rent.ui.navigation.CKeysListFragment"
+        android:label="@string/nav_keys_list"
+        tools:layout="@layout/keys_list_fragment" />
+
+    <!-- <fragment
+        android:id="@+id/navigationHousesList"
+        android:name="ru.rbkdev.rent.ui.navigation.CHousesListFragment"
+        android:label="@string/nav_houses_list"
+        tools:layout="@layout/houses_list_fragment" /> -->
+
+    <fragment
+        android:id="@+id/navigationMap"
+        android:name="ru.rbkdev.rent.ui.navigation.CMapFragment"
+        android:label="@string/nav_map"
+        tools:layout="@layout/main_map_fragment" />
+
+    <fragment
+        android:id="@+id/navigationSettings"
+        android:name="ru.rbkdev.rent.ui.navigation.CSettingsFragment"
+        android:label="Настрйки"
+        tools:layout="@xml/settings_fragment" />
+
+</navigation>

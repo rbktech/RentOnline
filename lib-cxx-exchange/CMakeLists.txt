@@ -8,7 +8,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_VERBOSE_MAKEFILE OFF)
 set(CMAKE_PREFIX_PATH $ENV{LIBRARY}/RBKLib)
 
-#set(TEST test)
+set(TEST test)
 
 find_package(rbk 1.0.0 REQUIRED)
 
@@ -71,7 +71,10 @@ if(${TEST} MATCHES test)
     target_link_libraries(${TEST} PRIVATE gtest_main)
     #target_link_libraries(${TEST} PRIVATE Ws2_32)
 
-    target_sources(${TEST} PRIVATE test/test.cpp)
+    target_sources(${TEST} PRIVATE src/knuckle.cpp)
+    target_sources(${TEST} PRIVATE src/reform.cpp)
+
+    target_sources(${TEST} PRIVATE test/knuckle.cpp)
 endif()
 
 ### Install ###
@@ -89,8 +92,10 @@ set(INSTALL_HEADER_FILES
         include/knuckle.h
 )
 
-set(INSTALL_TARGET_FILES
-        ${PROJECT_NAME}
-)
+list(APPEND INSTALL_TARGET_FILES ${PROJECT_NAME})
+
+if(${TEST} MATCHES test)
+    list(APPEND INSTALL_TARGET_FILES ${TEST})
+endif()
 
 include(config/install.cmake)

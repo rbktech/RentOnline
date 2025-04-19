@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/llDate"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_gravity="center_horizontal">
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <TextView
+            android:id="@+id/txtDateViewBegin"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MM.DD.YYYY"
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtDateViewTire"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=" - "
+            android:gravity="center"/>
+
+        <TextView
+            android:id="@+id/txtDateViewEnd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="MM.DD.YYYY"
+            android:gravity="center"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <NumberPicker
+            android:id="@+id/numberPickerDayBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+
+        <NumberPicker
+            android:id="@+id/numberPickerMonthBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+
+        <NumberPicker
+            android:id="@+id/numberPickerYearBegin"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_gravity="center">
+
+        <NumberPicker
+            android:id="@+id/numberPickerDayEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+
+        <NumberPicker
+            android:id="@+id/numberPickerMonthEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+
+        <NumberPicker
+            android:id="@+id/numberPickerYearEnd"
+            android:layout_width="wrap_content"
+            android:layout_height="100dp"/>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btnSaveDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Сохранить"
+        android:layout_gravity="center"/>
+
+</LinearLayout>

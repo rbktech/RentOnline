@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <GridLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_margin="20dp">
+
+        <EditText
+            android:id="@+id/txtOwner"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Собственник"/>
+
+        <EditText
+            android:id="@+id/txtTown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Город"/>
+
+        <EditText
+            android:id="@+id/txtStreetSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Улица"/>
+
+        <EditText
+            android:id="@+id/txtHouseSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Дом"/>
+
+        <EditText
+            android:id="@+id/txtGeo"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Гео позиция"/>
+
+        <EditText
+            android:id="@+id/txtIpHouse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="IP-адрес квартиры"/>
+
+        <EditText
+            android:id="@+id/txtDistanceSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Расстояние до центра"/>
+
+        <EditText
+            android:id="@+id/txtNumberPersonSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Количество персон"/>
+
+        <EditText
+            android:id="@+id/txtNumberRoomsSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Количество комнат"/>
+
+        <EditText
+            android:id="@+id/txtPriceSave"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Цена"/>
+
+        <EditText
+            android:id="@+id/txtDescription"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Описание"/>
+
+        <HorizontalScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <LinearLayout
+                android:id="@+id/layoutImageViewSave"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent">
+
+                <ImageButton
+                    android:id="@+id/imgBtnSaveFerm0"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/baseline_add_black_48"
+                    android:background="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/imgBtnSaveFerm1"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/baseline_add_black_48"
+                    android:background="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/imgBtnSaveFerm2"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/baseline_add_black_48"
+                    android:background="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/imgBtnSaveFerm3"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/baseline_add_black_48"
+                    android:background="#FFFFFF"/>
+
+                <ImageButton
+                    android:id="@+id/imgBtnSaveFerm4"
+                    android:layout_width="70dp"
+                    android:layout_height="70dp"
+                    android:src="@mipmap/baseline_add_black_48"
+                    android:background="#FFFFFF"/>
+
+            </LinearLayout>
+        </HorizontalScrollView>
+
+        <Button
+            android:id="@+id/btnSaveFerm"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/save"/>
+
+    </GridLayout>
+</ScrollView>

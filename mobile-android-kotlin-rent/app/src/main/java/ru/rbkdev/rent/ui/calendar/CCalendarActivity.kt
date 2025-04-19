@@ -33,11 +33,11 @@ import com.kizitonwose.calendarview.ui.ViewContainer
 import com.kizitonwose.calendarview.ui.MonthHeaderFooterBinder
 import com.kizitonwose.calendarview.utils.yearMonth
 
-// import ru.yoomoney.sdk.kassa.payments.Checkout
-// import ru.yoomoney.sdk.kassa.payments.checkoutParameters.Amount
-// import ru.yoomoney.sdk.kassa.payments.checkoutParameters.PaymentMethodType
-// import ru.yoomoney.sdk.kassa.payments.checkoutParameters.PaymentParameters
-// import ru.yoomoney.sdk.kassa.payments.checkoutParameters.SavePaymentMethod
+import ru.yoomoney.sdk.kassa.payments.Checkout
+import ru.yoomoney.sdk.kassa.payments.checkoutParameters.Amount
+import ru.yoomoney.sdk.kassa.payments.checkoutParameters.PaymentMethodType
+import ru.yoomoney.sdk.kassa.payments.checkoutParameters.PaymentParameters
+import ru.yoomoney.sdk.kassa.payments.checkoutParameters.SavePaymentMethod
 
 /***/
 fun daysOfWeekFromLocale(): Array<DayOfWeek> {
@@ -164,7 +164,7 @@ class CCalendarActivity : AppCompatActivity() {
 
                     val token: String
                     result.data?.let { intent ->
-                        // token = Checkout.createTokenizationResult(intent).paymentToken
+                        token = Checkout.createTokenizationResult(intent).paymentToken
                     }
 
                     intent.getStringExtra(getString(R.string.intent_pay_result))?.let { date ->
@@ -207,7 +207,7 @@ class CCalendarActivity : AppCompatActivity() {
                 val title: String = house.addressHouse
                 val subtitle = "Количесто часов: $hour"
 
-                /*val paymentMethodTypes: HashSet<PaymentMethodType> = HashSet<PaymentMethodType>()
+                val paymentMethodTypes: HashSet<PaymentMethodType> = HashSet<PaymentMethodType>()
                 paymentMethodTypes.add(PaymentMethodType.BANK_CARD)
                 paymentMethodTypes.add(PaymentMethodType.SBERBANK)
                 paymentMethodTypes.add(PaymentMethodType.GOOGLE_PAY)
@@ -216,8 +216,8 @@ class CCalendarActivity : AppCompatActivity() {
                     Amount(BigDecimal(price), Currency.getInstance("RUB")),
                     title,
                     subtitle,
-                    getString(R.string.ya_token),
-                    getString(R.string.ya_id),
+                    "getString(R.string.ya_token)",
+                    "getString(R.string.ya_id)",
                     SavePaymentMethod.OFF,
                     paymentMethodTypes
                 )
@@ -225,7 +225,7 @@ class CCalendarActivity : AppCompatActivity() {
                 intent.putExtra(getString(R.string.intent_pay_result), resultData)
 
                 val intent = Checkout.createTokenizeIntent(baseContext, paymentParameters)
-                mResultLauncher.launch(intent)*/
+                mResultLauncher.launch(intent)
             }
         }
 

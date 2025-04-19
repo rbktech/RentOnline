@@ -72,8 +72,7 @@ class CMainActivity : AppCompatActivity() {
 
     /***/
     override fun onDestroy() {
-        super.onDestroy()
-
         MapKitFactory.setApiKey("getString(R.string.ya_map_key)")
+        super.onDestroy()
     }
 }

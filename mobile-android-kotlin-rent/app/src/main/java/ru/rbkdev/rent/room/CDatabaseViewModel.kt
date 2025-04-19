@@ -174,16 +174,16 @@ open class CDatabaseViewModel(application: Application) : CViewModelBase(applica
         else
             data.place = barcode.place*/
 
-        // mKeysDao.insert(item)
+        mKeysDao.insert(item)
 
         //barcode.setCodeAndMessage(context, R.string.ui_barcode_insert)
     }
 
     fun delete(context: Context, item: CKeysTable) = runBlocking {
 
-        // barcode.setCodeAndMessage(context, R.string.ui_error)
+        //barcode.setCodeAndMessage(context, R.string.ui_error)
 
-        // mKeysDao.delete(item)
+        mKeysDao.delete(item)
 
         // barcode.setCodeAndMessage(context, R.string.ui_barcode_delete)
         // barcode.setCode(R.string.ui_success)
@@ -192,9 +192,9 @@ open class CDatabaseViewModel(application: Application) : CViewModelBase(applica
 
     fun update(context: Context, item: CKeysTable) = runBlocking {
 
-        // barcode.setCodeAndMessage(context, R.string.ui_error)
+        //barcode.setCodeAndMessage(context, R.string.ui_error)
 
-        // mKeysDao.update(item)
+        mKeysDao.update(item)
 
         // barcode.setCodeAndMessage(context, R.string.ui_barcode_delete)
         // barcode.setCode(R.string.ui_success)

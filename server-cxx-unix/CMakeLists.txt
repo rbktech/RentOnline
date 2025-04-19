@@ -1,7 +1,11 @@
 cmake_minimum_required(VERSION 3.10)
 
-project(server-cxx-unix)
+file(STRINGS "version" VERSION)
+
+project(server-cxx-unix VERSION 1.0.0)
+
 set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_VERBOSE_MAKEFILE OFF)
 
 set(TEST test)
 
@@ -49,5 +53,6 @@ if(${TEST} MATCHES test)
     target_sources(${TEST} PRIVATE src/core/basecommand.cpp)
 
     target_sources(${TEST} PRIVATE test/commands.cpp)
+    target_sources(${TEST} PRIVATE test/server_send_picture.cpp)
 
 endif()

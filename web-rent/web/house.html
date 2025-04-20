@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html>
+<head>
+
+	<meta charset="UTF-8">
+
+	<!-- Пишем заголовок документа -->
+	<title>RbkDev</title>
+
+	<!-- Подключаем jquery -->
+	<link rel="stylesheet" href="//code.jquery.com/ui/1.13.2/themes/base/jquery-ui.css">
+	<link rel="stylesheet" href="/resources/demos/style.css">
+	<script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+	<script src="https://code.jquery.com/ui/1.13.2/jquery-ui.js"></script>
+
+	<!-- Подключаем CSS-файл к документу -->
+	<link rel="stylesheet" type="text/css" href="/css/house.css" />
+	<link rel="stylesheet" type="text/css" href="/css/calendar.css" />
+
+	<!-- Подключаем файл со своим собственным скриптом -->
+	<script src="/script/house.js" defer></script>
+	<script src="/script/calendar.js" defer></script>
+
+</head>
+<body>
+
+	<div class="fixed-panel">
+		<a class="title" href="/">RbkDev</a>
+	</div>
+	<p>House</p>
+
+	<div class="container">
+		<img id="ID_IMG_HOUSE" class="image">
+		<div class="h_box">
+			<label id="ID_LBL_ADDRESS"></label>
+			<label class="lbl_house" id="ID_LBL_RATING"></label>
+		</div>
+
+		<div class="v_box">
+			<label class="lbl_house" id="ID_LBL_DISTANCE_CENTER"></label>
+			<label id="ID_LBL_COUNT_ROOM"></label>
+			<label class="lbl_house" id="ID_LBL_PRICE"></label>
+		</div>
+	</div>
+
+	<p id="ID_LBL_BOOKING">Register to booking an apartment</p>
+
+	<!-------------------------------------------------------------------------------------------------------------------->
+
+	<div id="ID_PNL_TOKEN_VALID">
+
+	<div class="aParent">
+		<div class="datepicker" type="text" id="from" name="from"> 
+		</div>
+		<div class="datepicker" type="text" id="to" name="to"> 
+		</div>
+	</div>
+
+	<div class="slider_box">
+
+		<div class="wrapper">
+			<div id="slider_from"></div>
+			<div class="slider-scale" style="counter-reset: section -1;">
+				<div class="slider-scale-tick slider-scale-big" data-label="0"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick slider-scale-big" data-label="6"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick slider-scale-big" data-label="12"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick slider-scale-big" data-label="18"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick slider-scale-big" data-label="0"></div>
+			</div>
+		</div>
+	
+	
+		<div class="wrapper">
+			<div id="slider_to"></div>
+			<div class="slider-scale" style="counter-reset: section -1;">
+				<div class="slider-scale-tick slider-scale-big" data-label="0"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick slider-scale-big" data-label="6"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick slider-scale-big" data-label="12"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick slider-scale-big" data-label="18"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick"></div>
+				<div class="slider-scale-tick slider-scale-big" data-label="0"></div>
+			</div>
+		</div>
+	</div>
+
+	<label id="ID_LBL_CALENDAR" class="label"></label>
+
+	<button class="button_calendar" id="btnBooking">Booking</button>
+
+	</div>
+
+</body>
+</html>

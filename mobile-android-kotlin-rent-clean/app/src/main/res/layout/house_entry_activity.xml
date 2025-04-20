@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:padding="30dp">
+
+    <TextView
+        android:id="@+id/txtHouseEntryDebugStatus"
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:gravity="bottom"
+        android:visibility="visible"
+        app:layout_constraintBottom_toTopOf="@+id/txtHouseEntryDescription" />
+
+    <TextView
+        android:id="@+id/txtHouseEntryDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:text="Настройка устройства \n для нового пользователя"
+        app:layout_constraintBottom_toTopOf="@+id/pbHouseEntry" />
+
+    <ProgressBar
+        android:id="@+id/pbHouseEntry"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/txtHouseEntryStatus"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        app:layout_constraintTop_toBottomOf="@+id/pbHouseEntry" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

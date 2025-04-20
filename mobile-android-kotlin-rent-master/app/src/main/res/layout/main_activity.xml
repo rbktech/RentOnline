@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="20dp"
+    tools:context=".MainActivity">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_server" />
+
+    <EditText
+        android:id="@+id/txtMainIpAddress"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/hint_department"
+        android:hint="@string/settings_ip_address"
+        android:inputType="text"
+        android:text="@string/default_ip_address" />
+
+    <EditText
+        android:id="@+id/txtMainPort"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/hint_department"
+        android:hint="@string/settings_port"
+        android:inputType="text"
+        android:text="@string/default_port" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/settings_wifi" />
+
+    <EditText
+        android:id="@+id/txtMainWiFiName"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/hint_department"
+        android:hint="@string/settings_wifi_name"
+        android:inputType="text"
+        android:text="@string/default_wifi_name" />
+
+    <EditText
+        android:id="@+id/txtMainWiFiPassword"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/hint_department"
+        android:hint="@string/settings_wifi_password"
+        android:inputType="textPassword"
+        android:text="@string/default_wifi_password" />
+
+    <EditText
+        android:id="@+id/txtMainAddressLocal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:autofillHints="@string/hint_department"
+        android:hint="@string/settings_address_local"
+        android:inputType="text"
+        android:text="@string/default_address_local" />
+
+    <Button
+        android:id="@+id/btnMainSave"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:enabled="false"
+        android:text="@string/save" />
+
+</LinearLayout>

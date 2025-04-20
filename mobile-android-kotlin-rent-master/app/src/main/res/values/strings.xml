@@ -1,0 +1,36 @@
+<resources>
+    <string name="app_name">Rent Master</string>
+
+    <string name="save">Сохранить</string>
+
+    <string name="hint_department">####</string>
+
+    <string name="settings_server">Сервер:</string>
+    <string name="settings_ip_address">IP-адрес</string>
+    <string name="settings_port">Порт</string>
+
+    <string name="settings_wifi">Wi-Fi:</string>
+    <string name="settings_wifi_name">Имя</string>
+    <string name="settings_wifi_password">Пароль</string>
+    <string name="settings_address_local">Адрес проживания</string>
+
+    <string name="json_command">command</string>
+    <string name="json_command_settings">settings</string>
+    <string name="json_status">status</string>
+    <string name="json_success">success</string>
+    <string name="json_ip_address_0">ip_address_00</string>
+    <string name="json_ip_address_1">ip_address_01</string>
+    <string name="json_ip_address_2">ip_address_02</string>
+    <string name="json_ip_address_3">ip_address_03</string>
+    <string name="json_port">port</string>
+    <string name="json_wifi_name">wifi_name</string>
+    <string name="json_wifi_password">wifi_password</string>
+    <string name="json_address_local">address_local</string>
+
+    <string name="default_ip_address">127.0.0.1</string>
+    <string name="default_port">21432</string>
+    <string name="default_wifi_name">WIFI_NAME</string>
+    <string name="default_wifi_password">WIFI_PASSWORD</string>
+    <string name="default_address_local">ул. Партизанская, д. 8, кв. 75</string>
+
+</resources>

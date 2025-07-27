@@ -31,3 +31,6 @@
 [submodule "rent-online-lib-cxx-exchange"]
 	path = rent-online-lib-cxx-exchange
 	url = https://github.com/rbktech/rent-online-lib-cxx-exchange.git
+[submodule "rent-online-hub-esp32-cxx-beacon"]
+	path = rent-online-hub-esp32-cxx-beacon
+	url = https://github.com/rbktech/rent-online-hub-esp32-cxx-beacon.git

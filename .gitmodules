@@ -25,3 +25,6 @@
 [submodule "rent-online-mobile-android-kotlin-client"]
 	path = rent-online-mobile-android-kotlin-client
 	url = https://github.com/rbktech/rent-online-mobile-android-kotlin-client.git
+[submodule "rent-online-mobile-android-java-client"]
+	path = rent-online-mobile-android-java-client
+	url = https://github.com/rbktech/rent-online-mobile-android-java-client.git

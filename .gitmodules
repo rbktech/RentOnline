@@ -1,3 +1,6 @@
 [submodule "rent-online-hub-esp32-cxx"]
 	path = rent-online-hub-esp32-cxx
 	url = https://github.com/rbktech/rent-online-hub-esp32-cxx.git
+[submodule "rent-online-desktop-cxx-wx-moderator"]
+	path = rent-online-desktop-cxx-wx-moderator
+	url = https://github.com/rbktech/rent-online-desktop-cxx-wx-moderator.git

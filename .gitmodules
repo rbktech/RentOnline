@@ -7,3 +7,6 @@
 [submodule "rent-online-web"]
 	path = rent-online-web
 	url = https://github.com/rbktech/rent-online-web.git
+[submodule "rent-online-server-cxx-unix"]
+	path = rent-online-server-cxx-unix
+	url = https://github.com/rbktech/rent-online-server-cxx-unix.git

@@ -19,3 +19,6 @@
 [submodule "rent-online-mobile-android-kotlin-kts"]
 	path = rent-online-mobile-android-kotlin-kts
 	url = https://github.com/rbktech/rent-online-mobile-android-kotlin-kts.git
+[submodule "rent-online-mobile-android-kotlin-clean"]
+	path = rent-online-mobile-android-kotlin-clean
+	url = https://github.com/rbktech/rent-online-mobile-android-kotlin-clean.git

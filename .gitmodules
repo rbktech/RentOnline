@@ -28,3 +28,6 @@
 [submodule "rent-online-mobile-android-java-client"]
 	path = rent-online-mobile-android-java-client
 	url = https://github.com/rbktech/rent-online-mobile-android-java-client.git
+[submodule "rent-online-lib-cxx-exchange"]
+	path = rent-online-lib-cxx-exchange
+	url = https://github.com/rbktech/rent-online-lib-cxx-exchange.git

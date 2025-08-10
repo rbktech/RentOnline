@@ -4,3 +4,6 @@
 [submodule "rent-online-emulator-lock-cxx"]
 	path = rent-online-emulator-lock-cxx
 	url = https://github.com/rbktech/rent-online-emulator-lock-cxx.git
+[submodule "rent-online-hub-esp32-cxx"]
+	path = rent-online-hub-esp32-cxx
+	url = https://github.com/rbktech/rent-online-hub-esp32-cxx.git
